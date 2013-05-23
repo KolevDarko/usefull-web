@@ -1,0 +1,13 @@
+alert("val 1: " + data['pocetok'] + " val 2 " + data['kraj']);
+
+  	$.ajax({
+			type: "POST",
+			url: "filter/printaj", // url directly in format controller/method
+			data: data, // parameters as json object
+			success: function(msg){
+				alert("vratena poraka: "+msg);
+				for (var i = msg.length - 1; i >= 0; i--) {
+					console.log(msg[i]);
+				};
+			}
+		});
